@@ -20,10 +20,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./src/types/**/*.d.ts",
+    "tailwind.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
