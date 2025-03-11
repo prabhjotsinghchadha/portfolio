@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-import '../globalStyles.scss';
+import '../styles/globals.css';
 
 import type {AppProps} from 'next/app';
 import {memo} from 'react';
