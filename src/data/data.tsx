@@ -9,22 +9,14 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import porfolioImage1 from '../images/portfolio/fps.png';
+import porfolioImage2 from '../images/portfolio/phuntoken.png';
+import porfolioImage3 from '../images/portfolio/pcl.png';
+import porfolioImage4 from '../images/portfolio/gumballpoodle.png';
+import porfolioImage5 from '../images/portfolio/fiveable.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -78,7 +70,7 @@ export const heroData: Hero = {
         to book coaching sessions and access professional courses.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        With <strong className="text-stone-100">10+ years of experience</strong>, I specialize in
+        With <strong className="text-stone-100">8+ years of experience</strong>, I specialize in
         <strong className="text-stone-100"> Next.js</strong>, <strong className="text-stone-100">React</strong>,
         <strong className="text-stone-100"> Node.js</strong>, and{' '}
         <strong className="text-stone-100">cloud technologies</strong> to build scalable solutions.
@@ -105,7 +97,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Chief Technology Officer with 10 years of experience leading web development and driving tech innovation. 
+  description: `Chief Technology Officer with 8+ years of experience leading web development and driving tech innovation. 
   At FPS Lounge, I led a cross-functional team and boosted user engagement by 40% in just six months. 
   I'm passionate about building scalable solutions, mentoring teams, and staying ahead of tech trends.`,
   aboutItems: [
@@ -199,39 +191,33 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'FPS Lounge Platform',
     description: 'A platform for gamers to book coaching sessions and access professional courses.',
-    url: 'https://prabhjotsinghchadha.com',
+    url: 'https://www.fpslounge.com/',
     image: porfolioImage1,
   },
   {
     title: 'Phuntoken',
     description: 'Led the development and launch of this cryptocurrency project.',
-    url: 'https://prabhjotsinghchadha.com',
+    url: 'https://phuntoken.com/',
     image: porfolioImage2,
   },
   {
-    title: 'E-commerce Solutions',
+    title: 'Long-term Client',
     description: 'Implemented successful e-commerce solutions for long-term clients.',
-    url: 'https://prabhjotsinghchadha.com',
+    url: 'https://www.paulchrisluke.com/',
     image: porfolioImage3,
   },
   // Keep remaining portfolio items as placeholders or remove them
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://prabhjotsinghchadha.com',
+    title: 'Gumballpoodle',
+    description: 'Gumball Poodle Shopify CRO',
+    url: 'https://www.gumballpoodle.com/',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://prabhjotsinghchadha.com',
+    title: 'Fiveable',
+    description: 'Fiveable shopify CRO',
+    url: 'https://fiveable.me/',
     image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://prabhjotsinghchadha.com',
-    image: porfolioImage6,
   },
 ];
 
@@ -303,17 +289,17 @@ export const testimonial: TestimonialSection = {
     {
       name: 'HisWattson',
       text: 'Prabhjot built an incredible platform that allowed me to share my gaming expertise with thousands of students. His technical skills and vision helped turn our course program into a massive success.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      image: 'https://res.cloudinary.com/prabhjottechs/image/upload/v1741759888/hiswattson.jpg',
     },
     {
       name: 'FPS Lounge Co-founder',
       text: 'Starting with just an idea, Prabhjot architected and built our entire platform from the ground up. His technical leadership and ability to talk to investors were instrumental in our growth and funding success.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      image: 'https://res.cloudinary.com/prabhjottechs/image/upload/v1741759587/derek.jpg',
     },
     {
       name: 'Upwork Client',
       text: 'Working with Prabhjot on our e-commerce project resulted in significant increases in sales and user engagement. His expertise in Next.js and React delivered a superior user experience that our customers love.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      image: 'https://res.cloudinary.com/prabhjottechs/image/upload/v1741759793/pcl.png',
     },
   ],
 };

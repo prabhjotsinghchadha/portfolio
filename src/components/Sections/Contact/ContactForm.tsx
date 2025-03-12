@@ -21,23 +21,32 @@ const ContactForm: FC = memo(() => {
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
       const {name, value} = event.target;
-
       const fieldData: Partial<FormData> = {[name]: value};
-
       setData({...data, ...fieldData});
     },
     [data],
   );
 
+  // Your WhatsApp number in international format (no + sign)
+  const whatsappNumber = '+918871143770'; // Replace with your actual WhatsApp number
+
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+
+      // Format the message for WhatsApp
+      const formattedMessage = `Name: ${data.name}%0AEmail: ${data.email}%0AMessage: ${data.message}`;
+
+      // Create WhatsApp URL
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+
+      // Reset the form after sending
+      setData(defaultData);
     },
-    [data],
+    [data, defaultData],
   );
 
   const inputClasses =
@@ -45,11 +54,20 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input
+        className={inputClasses}
+        name="name"
+        value={data.name}
+        onChange={onChange}
+        placeholder="Name"
+        required
+        type="text"
+      />
       <input
         autoComplete="email"
         className={inputClasses}
         name="email"
+        value={data.email}
         onChange={onChange}
         placeholder="Email"
         required
@@ -59,6 +77,7 @@ const ContactForm: FC = memo(() => {
         className={inputClasses}
         maxLength={250}
         name="message"
+        value={data.message}
         onChange={onChange}
         placeholder="Message"
         required
@@ -68,7 +87,7 @@ const ContactForm: FC = memo(() => {
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-hidden hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
         type="submit">
-        Send Message
+        Send Message via WhatsApp
       </button>
     </form>
   );
